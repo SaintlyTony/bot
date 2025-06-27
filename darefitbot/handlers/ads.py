@@ -7,7 +7,7 @@ router = Router()
 
 
 async def send_random_ad(message: types.Message) -> None:
-    ad = tools.select_ad()
+    ad = await tools.select_ad()
     if not ad:
         return
     keyboard = None
