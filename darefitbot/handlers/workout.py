@@ -11,7 +11,7 @@ router = Router()
 @router.message(commands=["workout"])
 async def workout_cmd(message: types.Message) -> None:
     user = models.get_user(message.from_user.id)
-    workout = tools.select_workout(user.get("goals"), user.get("level"))
+    workout = await tools.select_workout(user.get("goals"), user.get("level"))
     if not workout:
         await message.answer("Тренировки не найдены.")
         return
