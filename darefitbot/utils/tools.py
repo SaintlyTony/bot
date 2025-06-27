@@ -30,5 +30,5 @@ async def select_ad() -> dict:
     return random.choice(ads) if ads else None
 
 
-def should_send_ad(user_id: int) -> bool:
-    return models.increment_ad_counter(user_id)
+async def should_send_ad(user_id: int) -> bool:
+    return await models.increment_ad_counter_async(user_id)

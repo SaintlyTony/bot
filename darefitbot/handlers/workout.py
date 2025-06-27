@@ -10,7 +10,7 @@ router = Router()
 
 @router.message(commands=["workout"])
 async def workout_cmd(message: types.Message) -> None:
-    user = models.get_user(message.from_user.id)
+    user = await models.get_user_async(message.from_user.id)
     workout = await tools.select_workout(user.get("goals"), user.get("level"))
     if not workout:
         await message.answer("Тренировки не найдены.")
@@ -24,5 +24,5 @@ async def workout_cmd(message: types.Message) -> None:
     )
     print(f"[workout] Отправлена тренировка ID:{workout['id']}")
 
-    if tools.should_send_ad(message.from_user.id):
+    if await tools.should_send_ad(message.from_user.id):
         await send_random_ad(message)
