@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Базовая разминка",
+    "level": "beginner",
+    "goal": "weight_loss",
+    "image": "static/workouts/warmup.jpg",
+    "description": "Простая тренировка для разогрева"
+  },
+  {
+    "id": 2,
+    "title": "Кардио интенсив",
+    "level": "intermediate",
+    "goal": "endurance",
+    "image": "static/workouts/cardio.jpg",
+    "description": "Упражнения для развития выносливости"
+  }
+]

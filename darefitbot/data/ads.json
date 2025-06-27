@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "text": "Подпишитесь на наш фитнес-канал!",
+    "image": "static/ads/ad1.jpg",
+    "button": "Перейти",
+    "url": "https://example.com"
+  }
+]
